@@ -1,0 +1,46 @@
+/* Resetting browser style */
+body, h1, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    font-family: Helvetica, sans-serif;
+    background-color: #a3a3a3;
+    color: #fff;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .title {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 3rem;
+}
+.navbar a {
+    font-size: 1rem;
+    color: #b2b2b2;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.navbar a:hover {
+    color: #fff;
+}
+
+.navbar a.active {
+    color: #fff;
+}

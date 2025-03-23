@@ -8,7 +8,7 @@ body, h1, ul, li, a {
 }
 body {
     font-family: 'Andale Mono', monospace;
-    background-color: #fff;
+    background-color: #000;
     color: #fff;
 }
 
@@ -20,6 +20,7 @@ body {
     background-color: #000;
     padding: 1rem 2rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #fff;
 }
 
 .navbar .logo {
@@ -32,7 +33,7 @@ body {
     gap: 4rem;
 }
 .navbar a {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: #b2b2b2;
     font-weight: bold;
     transition: color 0.3s;
@@ -47,8 +48,8 @@ body {
 
 /* greeting text */
 .greeting {
-    padding: 2rem 2rem;
-    color: #000;
+    padding: 8rem 2rem;
+    color: #fff;
     font-size: 2.5rem;
     font-family: 'Space Mono', monospace;
 }
@@ -81,7 +82,7 @@ body {
 
 .card {
     padding: 2rem 2rem;
-    color: #000;
+    color: #fff;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
@@ -99,7 +100,7 @@ body {
 
 /* Top line */
 .topline {
-    background-color: #000;
+    background-color: #fff;
     height: 6px;
     margin-top: 0;
     margin-bottom: 3.125rem;

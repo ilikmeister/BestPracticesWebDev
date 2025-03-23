@@ -31,8 +31,8 @@ async function startAnimation() {
     const text1 = document.getElementById('text1');
     const text2 = document.getElementById('text2');
     
-    await typeWriter(text1, 'Hello, mate!');
-    await typeWriter(text2, 'These are the Best Coding Practices in:');
+    await typeWriter(text1, 'hello, mate!');
+    await typeWriter(text2, 'these are the best coding practices in:');
     showCards();
 }
 

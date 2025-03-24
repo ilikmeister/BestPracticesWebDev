@@ -377,33 +377,33 @@ list > div {
 }
 
 .navbar a {
-    font-size: 0.8rem;
+    font-size: 0.5rem;
 }
 
 .bar {
-    width: 150px;
+    width: 100px;
     height: 20px;
 }
 
 .list {
     padding: 0.5rem;
-    font-size: 0.7rem;
+    font-size: 0.5rem;
 }
 
 .greeting {
-    font-size: 1rem;
+    font-size: 0.6rem;
 }
 
 .card h1 {
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 .button-text {
-    font-size: 1rem;
+    font-size: 0.6rem;
 }
 
 .list-image {
-    height: 220px;
+    height: 150px;
     width: auto;
 }
 }

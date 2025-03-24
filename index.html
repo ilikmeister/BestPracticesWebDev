@@ -19,8 +19,7 @@
     <div class="container">
         <div class="block" id="greeting">
             <div class="greeting">
-                <h1 id="text1"></h1>
-                <h1 id="text2"></h1>
+                <p id="greetingtext"></p>
             </div>
             <div class="cards">
                 <div class="card" onclick="scrollToBlock('html')">
@@ -45,7 +44,7 @@
                 <div>
                     <h1 style="color: #FF5700">html best practices</h1>
                     <br>
-                    <ul class="best-practices-list">
+                    <div class="best-practices-list">
                         <input type="checkbox" id="semantichtml">
                         <label for="semantichtml"><strong style="color: #FF5700">use semantic html:</strong> semantic elements make your html more readable, accessible, and seo-friendly. it helps search engines and screen readers understand the content better.</label>
                         <br>
@@ -60,7 +59,7 @@
                         <br>
                         <input type="checkbox" id="closetags">
                         <label for="closetags"><strong style="color: #FF5700">close all tags properly:</strong> even if html5 allows not to close some tags, exliciptly closing them improves the readability and makes sure that rendering is consistent on different browsers.</label>
-                    </ul>
+                    </div>
                 </div>
             </div>
             <div class="card" onclick="scrollToBlock('css')" style="color:#379AD6">
@@ -72,7 +71,7 @@
                 <div>
                     <h1 style="color: #379AD6">css best practices</h1>
                     <br>
-                    <ul class="best-practices-list">
+                    <div class="best-practices-list">
                         <input type="checkbox" id="externalcss">
                         <label for="externalcss"><strong style="color: #379AD6">use external stylesheets:</strong> keeping styles in a .css file helps separate content from design, making updates easier and improving page load performance.</label>
                         <br>
@@ -87,7 +86,7 @@
                         <br>
                         <input type="checkbox" id="avoidimp">
                         <label for="avoidimp"><strong style="color: #379AD6">avoid !important:</strong> the !important declaration overrides all other rules, making debugging and future maintenance difficult. it should only be used as a last resort.</label>
-                    </ul>
+                    </div>
                 </div>
                 <div>
                     <img class="list-image" src="assets/css.png" alt="css">
@@ -110,7 +109,7 @@
                 <div>
                     <h1 style="color: #FDCD00">javascript best practices</h1>
                     <br>
-                    <ul class="best-practices-list">
+                    <div class="best-practices-list">
                         <input type="checkbox" id="useletconst">
                         <label for="useletconst"><strong style="color: #FDCD00">use let and const instead of var:</strong> let and const have block scope, preventing unintended variable modifications, while var has function scope, which can lead to bugs.</label>
                         <br>
@@ -125,7 +124,7 @@
                         <br>
                         <input type="checkbox" id="asyncawait">
                         <label for="asyncawait"><strong style="color: #FDCD00">use async and await for better asynchronous code:</strong> async and await make asynchronous code easier to read and debug compared to traditional callbacks or .then() chains.</label>
-                    </ul>
+                    </div>
                 </div>
             </div>
             <div class="cards">

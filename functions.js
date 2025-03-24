@@ -38,11 +38,9 @@ function showLists() {
 }
 // function to make animation order
 async function startAnimation() {
-    const text1 = document.getElementById('text1');
-    const text2 = document.getElementById('text2');
+    const greetingtext = document.getElementById('greetingtext');
     
-    await typeWriter(text1, 'hello, mate! check which ones you follow');
-    await typeWriter(text2, 'from the best coding practices in:');
+    await typeWriter(greetingtext, 'hello, mate! check which ones you follow from the best coding practices in:');
     await showCards();
     showLists();
 }

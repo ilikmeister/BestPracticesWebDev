@@ -228,6 +228,96 @@ list > div {
 }
 
 /* media queries */
+@media screen and (max-width: 1600px) {
+    .navbar {
+        padding: 0.9rem 1.8rem;
+    }
+
+    .navbar .logo {
+        height: 60px;
+    }
+
+    .navbar ul {
+        gap: 3.5rem;
+    }
+
+    .navbar a {
+        font-size: 1.4rem;
+    }
+
+    .bar {
+        width: 450px;
+        height: 45px;
+    }
+
+    .list {
+        padding: 1.8rem;
+        font-size: 1.2rem;
+    }
+
+    .greeting {
+        font-size: 2rem;
+    }
+
+    .card h1 {
+        font-size: 2.2rem;
+    }
+
+    .button-text {
+        font-size: 1.7rem;
+    }
+
+    .list-image {
+        height: 420px;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .navbar {
+        padding: 0.8rem 1.5rem;
+    }
+
+    .navbar .logo {
+        height: 50px;
+    }
+
+    .navbar ul {
+        gap: 3rem;
+    }
+
+    .navbar a {
+        font-size: 1.3rem;
+    }
+
+    .bar {
+        width: 400px;
+        height: 40px;
+    }
+
+    .list {
+        padding: 1.5rem;
+        font-size: 1rem;
+    }
+
+    .greeting {
+        font-size: 1.5rem;
+    }
+
+    .card h1 {
+        font-size: 2rem;
+    }
+
+    .button-text {
+        font-size: 1.5rem;
+    }
+
+    .list-image {
+        height: 380px;
+        width: auto;
+    }
+}
+
 @media screen and (max-width: 768px) {
 .navbar {
     padding: 0.33rem 0.67rem;

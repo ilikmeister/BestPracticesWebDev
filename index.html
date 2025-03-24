@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best Web Dev Practices</title>
+    <title>Best Coding Practices</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="functions.js"></script>
 </head>
 <body>
     <nav class="navbar">
-        <div><a href="index.html"><img src="assets/icon.png" alt="Logo" class="logo"></a></div>
+        <div><a href="index.html"><img src="assets/icon.png" alt="webdev" class="logo"></a></div>
         <ul>
             <li><a href="index.html" class="active">home</a></li>
             <li><a href="portfolio.html">portfolio</a></li>
@@ -21,19 +21,76 @@
     </div>
     <div class="cards">
         <div class="card">
-            <div class="topline" style="background-color: #ff6962"></div>
-            <h1 style="color: #ff6962">&lt;html&gt;</h1>
-            <p></p>
+            <div class="topline" style="background-color: #FF5700"></div>
+            <h1 style="color: #FF5700">&lt;html&gt;</h1>
         </div>
         <div class="card">
-            <div class="topline" style="background-color: #78A2CC"></div>
-            <h1 style="color: #78A2CC">#css</h1>
-            <p></p>
+            <div class="topline" style="background-color: #379AD6"></div>
+            <h1 style="color: #379AD6">#css</h1>
         </div>
         <div class="card">
-            <div class="topline" style="background-color: #F4C165"></div>
-            <h1 style="color: #F4C165">javascript</h1>
-            <p></p>
+            <div class="topline" style="background-color: #FDCD00"></div>
+            <h1 style="color: #FDCD00">javascript</h1>
+        </div>
+    </div>
+    <div class="list">
+        <div>
+            <img class="list-image" src="assets/html.png" alt="html">
+        </div>
+        <div>
+            <h1 style="color: #FF5700">html best practices</h1>
+            <br>
+            <ul>
+                <li><strong style="color: #FF5700">use semantic html:</strong> semantic elements make your html more readable, accessible, and seo-friendly. it helps search engines and screen readers understand the content better.</li>
+                <br>
+                <li><strong style="color: #FF5700">validate your html:</strong> using a validator (such as w3c validator) ensures that your code is free from syntax errors.</li>
+                <br>
+                <li><strong style="color: #FF5700">use alt for images:</strong> the alt attribute provides alternative text for images, making your site more accessible to visually impaired users and improving seo.</li>
+                <br>
+                <li><strong style="color: #FF5700">minimize inline styles:</strong> keeping the styling in separate css files rather than inline styling improves maintainability, promotes reusability, and ensures a cleaner structure.</li>
+                <br>
+                <li><strong style="color: #FF5700">close all tags properly:</strong> even if html5 allows not to close some tags, exliciptly closing them improves the readability and makes sure that rendering is consistent on different browsers.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="list">
+        <div>
+            <h1 style="color: #379AD6">css best practices</h1>
+            <br>
+            <ul>
+                <li><strong style="color: #379AD6">use external stylesheets:</strong> keeping styles in a .css file helps separate content from design, making updates easier and improving page load performance.</li>
+                <br>
+                <li><strong style="color: #379AD6">use flexbox and grid for layouts:</strong> flexbox and css grid provide modern, flexible, and powerful layout techniques that replace older methods like float-based designs.</li>
+                <br>
+                <li><strong style="color: #379AD6">use relative units instead of fixed units:</strong> using em, rem, %, or vw/vh instead of px ensures better responsiveness and accessibility across devices.</li>
+                <br>
+                <li><strong style="color: #379AD6">use css animations over js animations:</strong> css animations like @keyframes are more performance-friendly than javascript-based animations and smooth for user interactions.</li>
+                <br>
+                <li><strong style="color: #379AD6">avoid !important:</strong> the !important declaration overrides all other rules, making debugging and future maintenance difficult. it should only be used as a last resort.</li>
+            </ul>
+        </div>
+        <div>
+            <img class="list-image" src="assets/css.png" alt="css">
+        </div>
+    </div>
+    <div class="list">
+        <div>
+            <img class="list-image" src="assets/js.png" alt="js">
+        </div>
+        <div>
+            <h1 style="color: #FDCD00">javascript best practices</h1>
+            <br>
+            <ul>
+                <li><strong style="color: #FDCD00">use let and const instead of var:</strong> let and const have block scope, preventing unintended variable modifications, while var has function scope, which can lead to bugs.</li>
+                <br>
+                <li><strong style="color: #FDCD00">keep functions small and focused:</strong> a function should perform only one task, making it easier to debug, test, and reuse across your project.</li>
+                <br>
+                <li><strong style="color: #FDCD00">avoid global variables:</strong> global variables can cause unintended interactions between different parts of your code.</li>
+                <br>
+                <li><strong style="color: #FDCD00">optimize loops and dom actions:</strong> reducing unnecessary dom updates and using documentfragment prevents performance issues like reflows and repaints, making your application faster.</li>
+                <br>
+                <li><strong style="color: #FDCD00">use async and await for better asynchronous code:</strong> async and await make asynchronous code easier to read and debug compared to traditional callbacks or .then() chains.</li>
+            </ul>
         </div>
     </div>
 </body>

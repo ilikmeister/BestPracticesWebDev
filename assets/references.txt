@@ -1,2 +1,20 @@
+Anthropic. (2024). Claude 3.5 Sonnet [Large language model]. Retrieved March 24, 2025, from https://www.anthropic.com/claude
+CityPNG. (n.d.). HD CSS3 round logo icon transparent PNG [Image]. Retrieved March 24, 2025, from https://www.citypng.com/photo/26151/hd-css3-round-logo-icon-transparent-png
+CityPNG. (n.d.). HD HTML5 round logo icon transparent PNG [Image]. Retrieved March 24, 2025, from https://www.citypng.com/png-download/26174
+CityPNG. (n.d.). HD JavaScript round logo icon transparent PNG [Image]. Retrieved March 24, 2025, from https://www.citypng.com/png-download/26154
+CSS-Tricks. (n.d.). The em unit and web typography. Retrieved March 24, 2025, from https://css-tricks.com/rems-ems/
+GitHub & OpenAI. (2023). GitHub Copilot [AI pair programming tool]. Retrieved March 24, 2025, from https://github.com/features/copilot
 Hong, E. (n.d.). A simple understanding of HTML, CSS, and JavaScript. LinkedIn. Retrieved March 23, 2025, from https://www.linkedin.com/pulse/simple-understanding-html-css-javascript-eddie-hong-3snhc/
-Icons8. (n.d.). Web development icons (white). Icons8. Retrieved March 23, 2025, from https://icons8.com/icons/set/web-development--white
+Icons8. (n.d.). Web development icons (white) [Image]. Retrieved March 23, 2025, from https://icons8.com/icons/set/web-development--white
+Mozilla. (n.d.). HTML elements reference. MDN Web Docs. Retrieved March 23, 2025, from https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+Mozilla. (n.d.). JavaScript best practices. MDN Web Docs. Retrieved March 23, 2025, from https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Best_practices
+Mozilla Developer Network. (n.d.). CSS flexbox guide. Retrieved March 24, 2025, from https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox
+Mozilla Developer Network. (n.d.). JavaScript variables. Retrieved March 24, 2025, from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Variables
+Mozilla Developer Network. (n.d.). Using !important effectively. Retrieved March 24, 2025, from https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity
+OpenAI. (2025). ChatGPT (March 2025 version) [Large language model]. OpenAI. Retrieved March 24, 2025, from https://openai.com/chatgpt
+Smashing Magazine. (2023). CSS best practices: Writing efficient and maintainable stylesheets. Retrieved March 23, 2025, from https://www.smashingmagazine.com/
+W3C. (n.d.). The HTML validator. World Wide Web Consortium (W3C). Retrieved March 23, 2025, from https://validator.w3.org/
+W3Schools. (n.d.). CSS animations. Retrieved March 24, 2025, from https://www.w3schools.com/css/css3_animations.asp
+W3Schools. (n.d.). CSS how to add CSS. Retrieved March 24, 2025, from https://www.w3schools.com/css/css_howto.asp
+W3Schools. (n.d.). JavaScript async/await. Retrieved March 24, 2025, from https://www.w3schools.com/js/js_async.asp
+W3Schools. (n.d.). JavaScript performance tips. Retrieved March 23, 2025, from https://www.w3schools.com/js/js_best_practices.asp

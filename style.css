@@ -48,7 +48,7 @@ body {
 
 /* greeting text */
 .greeting {
-    padding: 8rem 2rem;
+    padding: 2rem 2rem;
     color: #fff;
     font-size: 2.5rem;
     font-family: 'Space Mono', monospace;
@@ -104,4 +104,34 @@ body {
     height: 6px;
     margin-top: 0;
     margin-bottom: 3.125rem;
+}
+
+/* List of practices div */
+.list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2rem;
+    font-size: 1.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.list.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.list h1 {
+    text-align: center;
+}
+
+list > div {
+    flex: 1;
+}
+
+.list-image {
+    height: 600px;
+    width: auto;
 }

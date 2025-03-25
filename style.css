@@ -76,6 +76,14 @@ body, html {
     align-items: center;
     justify-content: center;
     position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.block.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* greeting text */
@@ -225,6 +233,53 @@ list > div {
     color: #fff;
     font-weight: bold;
     text-shadow: 2px 2px 2px #000;
+}
+
+.cvpic {
+    width: 400px;
+    height: auto;
+    margin-right: 5rem;
+}
+
+.cvgreeting {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.cvgreetingtext {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 2rem;
+    flex: 1;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.nav-btn {
+    padding: 0.8rem 1.5rem;
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    font-family: 'Andale Mono', monospace;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    background: #fff;
+    color: #434343;
 }
 
 /* media queries */

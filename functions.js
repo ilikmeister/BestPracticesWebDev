@@ -154,3 +154,20 @@ window.addEventListener('load', () => {
     // Initial progress update
     updateProgress();
 });
+
+// Creating an Intersection Observer
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, {
+    threshold: 0.1 // Trigger when at least 10% of the element is visible
+});
+
+// Observing all blocks
+document.addEventListener('DOMContentLoaded', () => {
+    const blocks = document.querySelectorAll('.block');
+    blocks.forEach(block => observer.observe(block));
+});

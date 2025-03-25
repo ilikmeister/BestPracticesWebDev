@@ -5,14 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="functions.js"></script>
 </head>
 <body>
     <nav class="navbar">
         <div><a href="index.html"><img src="assets/icon.png" alt="Logo" class="logo"></a></div>
         <ul>
             <li><a href="index.html">home</a></li>
-            <li><a href="portfolio.html" class="active">portfolio</a></li>
+            <li onclick="scrollToBlock('cvgreeting')"><a class="active">portfolio</a></li>
         </ul>
     </nav>
+    <div class="container">
+        <div class="block" id="cvgreeting">
+            <div class="cvgreeting">
+                <div>
+                    <p class="cvgreetingtext">hey, my name is <strong>iliyas akhmet</strong></p>
+                    <p class="cvgreetingtext">i am a hard-working, capable, and responsible person with experience in it companies, projects, and start-ups. currently doing a masters in it at the uwa.</p>
+                    <div class="nav-buttons">
+                        <button onclick="scrollToBlock('experience')" class="nav-btn">experience</button>
+                        <button onclick="scrollToBlock('education')" class="nav-btn">education</button>
+                        <button onclick="scrollToBlock('skills')" class="nav-btn">skills</button>
+                        <button onclick="scrollToBlock('certificates')" class="nav-btn">certificates</button>
+                        <button onclick="scrollToBlock('contacts')" class="nav-btn">contacts</button>
+                    </div>
+                </div>
+                <img src="assets/pic.jpeg" alt="cv" class="cvpic">
+            </div> 
+        </div>
+        <div class="block" id="experience">
+            Experience content
+        </div>
+        <div class="block" id="education">
+            Education content
+        </div>
+        <div class="block" id="skills">
+            Skills content
+        </div>
+        <div class="block" id="certificates">
+            Certificates content
+        </div>
+        <div class="block" id="contacts">
+            Contacts content
+        </div>
+    </div>
 </body>
 </html>

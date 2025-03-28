@@ -40,7 +40,7 @@ function showLists() {
 async function startAnimation() {
     const greetingtext = document.getElementById('greetingtext');
     
-    await typeWriter(greetingtext, 'hello, mate! check which ones you follow from the best coding practices in:');
+    await typeWriter(greetingtext, 'Hello, mate! Check which ones you follow from the best coding practices in:');
     await showCards();
     showLists();
 }
@@ -96,11 +96,11 @@ function updateSummary(checkedCount) {
     }
     // Checking the progress counter to handle the summary
     if (checkedCount >= 0 && checkedCount <= 5) {
-        summaryText = "work harder, as you need to follow at least 12 coding practices to reach the success.";
+        summaryText = "Work harder, as you need to follow at least 12 coding practices to reach the success.";
     } else if (checkedCount >= 6 && checkedCount <= 11) {
-        summaryText = "you are on the right track, however, you still need to follow at least 12 coding practices to reach the success.";
+        summaryText = "You are on the right track, however, you still need to follow at least 12 coding practices to reach the success.";
     } else if (checkedCount >= 12 && checkedCount <= 15) {
-        summaryText = "excellent job! you are following many practices. this is your golden retriever :)";
+        summaryText = "Excellent job! You are following many practices. this is your golden retriever :)";
         showRetriever(); // fetching an image for 12 or more
     }
     // altering the text
@@ -125,7 +125,7 @@ window.addEventListener('load', () => {
     function updateProgress() {
         const checkedCount = document.querySelectorAll('.best-practices-list input[type="checkbox"]:checked').length;
         const totalCount = document.querySelectorAll('.best-practices-list input[type="checkbox"]').length;
-        const progressText = `your progress: ${checkedCount}/${totalCount}`;
+        const progressText = `Your progress: ${checkedCount}/${totalCount}`;
         
         // Updating progress in the navbar
         const progressElement = document.getElementById("progress");

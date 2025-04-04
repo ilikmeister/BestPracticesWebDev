@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best Coding Practices</title>
+    
+    <!-- External stylesheets and scripts -->
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="functions.js"></script>
 </head>
 <body>
+    <!-- Fixed navbar -->
     <nav class="navbar">
+        <!-- Logo with home link -->
         <div><a href="index.html"><img src="assets/icon.png" alt="webdev" class="logo"></a></div>
+        <!-- Progress counter for completed practices -->
         <span id="progress">Your progress: 0/15</span>
+        <!-- Navigation links -->
         <ul>
             <li onclick="scrollToBlock('greeting')"><a class="active">Home</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
         </ul>
     </nav>
+
+    <!-- Main content wrapper -->
     <div class="container">
+        <!-- Welcome section with animated greeting -->
         <div class="block" id="greeting">
             <div class="greeting">
                 <p id="greetingtext"></p>
@@ -36,15 +46,20 @@
                 </div>
             </div>
         </div>
+
+        <!-- HTML best practices section -->
         <div class="block" id="html">
             <div class="list">
+                <!-- Section image -->
                 <div>
                     <img class="list-image" src="assets/html.png" alt="html">
                 </div>
+                <!-- Best practices checklist -->
                 <div>
                     <h1 style="color: #FF5700">HTML Best Practices</h1>
                     <br>
                     <div class="best-practices-list">
+                        <!-- Individual practice items with checkboxes -->
                         <input type="checkbox" id="semantichtml">
                         <label for="semantichtml"><strong style="color: #FF5700">Use semantic HTML:</strong> semantic elements make your HTML more readable, accessible, and SEO-friendly. It helps search engines and screen readers understand the content better.</label>
                         <br>
@@ -62,10 +77,13 @@
                     </div>
                 </div>
             </div>
+            <!-- Navigation to next section -->
             <div class="card" onclick="scrollToBlock('css')" style="color:#379AD6">
                 <strong class="button-text">CSS →</strong>
             </div>
         </div>
+
+        <!-- CSS best practices section -->
         <div class="block" id="css">
             <div class="list">
                 <div>
@@ -101,6 +119,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- JavaScript best practices section -->
         <div class="block" id="js">
             <div class="list">
                 <div>
@@ -136,6 +156,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- Summary and progress section -->
         <div class="block" id="summary">
             <div class="list">
                 <div>
@@ -145,6 +167,14 @@
                     </div>
                     <br><br>
                     <span class="summary-text" id="summarytext"></span>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="card" onclick="scrollToBlock('js')" style="color:#FDCD00">
+                    <strong class="button-text">← JS</strong>
+                </div>
+                <div class="card" onclick="scrollToBlock('greeting')" style="color: #049c04">
+                    <strong class="button-text">TOP</strong>
                 </div>
             </div>
         </div>

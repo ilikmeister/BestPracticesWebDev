@@ -1,4 +1,4 @@
-/* resetting browser style */
+/* Reset default browser styles */
 body, h1, ul, li, a {
     margin: 0;
     padding: 0;
@@ -6,17 +6,20 @@ body, h1, ul, li, a {
     text-decoration: none;
     color: inherit;
 }
+
+/* Set base styles and theme colors */
 body {
     font-family: 'Andale Mono', monospace;
     background-color: #434343;
     color: #fff;
 }
 
+/* Enable smooth scrolling behavior */
 body, html {
     scroll-behavior: smooth;
-  }
-  
-/* Navbar */
+}
+
+/* Fixed navigation bar at the top */
 .navbar {
     display: flex;
     justify-content: space-around;
@@ -39,12 +42,14 @@ body, html {
     display: flex;
     gap: 4rem;
 }
+
 .navbar a {
     font-size: 1.5rem;
     color: #b2b2b2;
     font-weight: bold;
     transition: color 0.3s;
 }
+
 .navbar a:hover {
     color: #fff;
 }
@@ -62,15 +67,15 @@ body, html {
     border-radius: 5px;
 }
 
-/* wrapped all blocks */
+/* Container for all full-screen sections */
 .container {
     display: flex;
     flex-direction: column;
 }
 
-/* each block for full screen size */
+/* Full-screen section with fade-in animation */
 .block {
-    height: 100vh; /* Full screen height */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -79,6 +84,8 @@ body, html {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
+    padding: 6rem 1rem 2rem;
+    box-sizing: border-box;
 }
 
 .block.visible {
@@ -86,7 +93,7 @@ body, html {
     transform: translateY(0);
 }
 
-/* greeting text */
+/* Welcome section with typing animation */
 .greeting {
     padding: 2rem 2rem;
     color: #fff;
@@ -94,7 +101,7 @@ body, html {
     font-family: 'Space Mono', monospace;
 }
 
-/* Typing cursor effect */
+/* Animated cursor for typing effect */
 .typing::after {
     content: '|';
     position: relative;
@@ -108,7 +115,7 @@ body, html {
     100% { opacity: 1; }
 }
 
-/* 3 cards layout */
+/* Three-column card grid layout */
 .cards {
     grid-column-gap: 3.125rem;
     grid-row-gap: 3.125rem;
@@ -120,6 +127,7 @@ body, html {
     display: grid;
 }
 
+/* Individual card with hover effect */
 .card {
     padding: 2rem 2rem;
     color: #fff;
@@ -144,7 +152,7 @@ body, html {
     transform: scale(1.05);
 }
 
-/* Top line */
+/* Decorative top border for cards */
 .topline {
     background-color: #fff;
     height: 6px;
@@ -152,7 +160,7 @@ body, html {
     margin-bottom: 3.125rem;
 }
 
-/* List of practices div */
+/* Two-column layout for content and image */
 .list {
     display: flex;
     justify-content: space-between;
@@ -186,28 +194,33 @@ list > div {
     font-size: 2rem;
 }
 
-/* custom checkbox */
+/* Custom checkbox styling for best practices */
 .best-practices-list input[type="checkbox"] {
     display: none; /* removing the default checkbox */
 }
-/* cursor as a pointer for each practice */
+
+/* Cursor as a pointer for each practice */
 .best-practices-list label {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-/* hover for each practice */
+
+/* Hover for each practice */
 .best-practices-list label:hover {
     background-color: #000;
 }
-/* unchecked practice */
+
+/* Unchecked practice */
 .best-practices-list label::before {
     content: "";
 }
-/* checked practice */
+
+/* Checked practice */
 .best-practices-list input[type="checkbox"]:checked + label::before {
     content: "✅";
 }
-/* bar chart */
+
+/* Progress bar with gradient fill */
 .bar {
     width: 500px;
     height: 50px;
@@ -235,9 +248,7 @@ list > div {
     text-shadow: 2px 2px 2px #000;
 }
 
-
-/* PORTFOLIO section */
-
+/* Portfolio section styles */
 .cvpic {
     width: 400px;
     height: auto;
@@ -262,6 +273,7 @@ list > div {
     flex: 1;
 }
 
+/* Navigation buttons with hover effect */
 .nav-buttons {
     display: flex;
     gap: 1rem;
@@ -285,8 +297,273 @@ list > div {
     color: #434343;
 }
 
-/* media queries */
+/* Two-column grid for experience cards */
+.experience-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.experience-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+}
+
+.experience-header {
+    margin-bottom: 1rem;
+}
+
+.experience-header h2 {
+    color: #FF5700;
+    margin: 0 0 0.5rem 0;
+}
+
+.company {
+    display: block;
+    font-size: 1.2rem;
+    color: #379AD6;
+    margin-bottom: 0.3rem;
+}
+
+.duration {
+    display: block;
+    font-size: 1rem;
+    color: #b2b2b2;
+}
+
+.responsibilities {
+    list-style-type: none;
+    padding: 0;
+}
+
+.responsibilities li {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.responsibilities li::before {
+    content: "•";
+    color: #FDCD00;
+    position: absolute;
+    left: 0;
+}
+
+/* Education section with logo and content */
+.education-card {
+    display: flex;
+    gap: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+}
+
+.education-logo {
+    flex: 0 0 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.university-logo {
+    max-width: 150px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.education-content {
+    flex: 1;
+}
+
+/* Certificate display with hover effect */
+.certificates-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.certificate-card {
+    display: flex;
+    gap: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+}
+
+.certificate-content {
+    flex: 1;
+}
+
+.certificate-content h2 {
+    color: #FF5700;
+    margin-bottom: 0.5rem;
+}
+
+.certificate-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: #379AD6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.certificate-link:hover {
+    background: #2980b9;
+}
+
+/* Contact form and social media layout */
+.contacts-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.social-item a {
+    color: #b2b2b2;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-item a:hover {
+    color: #fff;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1rem;
+}
+
+.message-box {
+    height: 150px;
+    resize: none;
+}
+
+.form-input::placeholder {
+    color: #b2b2b2;
+}
+
+.form-input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* APA style reference list formatting */
+.references-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.reference-list {
+    list-style: none;
+    padding: 0;
+}
+
+.reference-item {
+    color: #b2b2b2;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    padding-left: 2.5rem;
+    text-indent: -2.5rem;
+}
+
+.reference-item em {
+    color: #FDCD00;
+}
+
+.reference-item a:hover {
+    color: #fff;
+}
+
+/* Loading states and error messages */
+.loading {
+    text-align: center;
+    padding: 2rem;
+    color: #b2b2b2;
+}
+
+.error-message {
+    text-align: center;
+    padding: 2rem;
+    color: #ff5757;
+}
+
+/* GitHub Link */
+.project-link {
+    display: inline-block;
+    color: #379AD6;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid #379AD6;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.project-link:hover {
+    background: #379AD6;
+    color: #fff;
+}
+
+/* Media queries */
 @media screen and (max-width: 1600px) {
+    /* Larger desktop screens */
     .navbar {
         padding: 0.9rem 1.8rem;
     }
@@ -329,9 +606,57 @@ list > div {
         height: 420px;
         width: auto;
     }
+
+    .cvpic {
+        width: 300px;
+        height: auto;
+        margin-right: 3rem;
+    }
+
+    .cvgreetingtext {
+        font-size: 1.8rem;
+    }
+
+    .experience-header h2 {
+        font-size: 1.4rem;
+    }
+
+    .company {
+        font-size: 1.1rem;
+    }
+
+    .responsibilities li {
+        font-size: 1rem;
+    }
+
+    .reference-item {
+        font-size: 0.9rem;
+        padding-left: 2rem;
+        text-indent: -2rem;
+    }
+
+    .form-input {
+        padding: 0.7rem;
+        font-size: 0.9rem;
+    }
+
+    .message-box {
+        height: 130px;
+    }
+
+    .social-icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    #progress {
+        font-size: 1.3rem;
+        padding: 4px 8px;
+    }
 }
 
 @media screen and (max-width: 1366px) {
+    /* Standard desktop screens */
     .navbar {
         padding: 0.8rem 1.5rem;
     }
@@ -374,94 +699,291 @@ list > div {
         height: 380px;
         width: auto;
     }
+
+    .cvgreetingtext {
+        font-size: 1.5rem;
+    }
+
+    .experience-header h2 {
+        font-size: 1.2rem;
+    }
+
+    .company {
+        font-size: 1rem;
+    }
+
+    .responsibilities li {
+        font-size: 0.9rem;
+    }
+
+    .reference-item {
+        font-size: 0.8rem;
+        padding-left: 1.5rem;
+        text-indent: -1.5rem;
+    }
+
+    .form-input {
+        padding: 0.6rem;
+        font-size: 0.8rem;
+    }
+
+    .message-box {
+        height: 120px;
+    }
+
+    #progress {
+        font-size: 1.2rem;
+        padding: 4px 8px;
+    }
 }
 
 @media screen and (max-width: 768px) {
-.navbar {
-    padding: 0.33rem 0.67rem;
-}
+    /* Tablet and mobile devices */
+    .navbar {
+        padding: 0.33rem 0.67rem;
+    }
 
-.navbar .logo {
-    height: 33px;
-}
+    .navbar .logo {
+        height: 33px;
+    }
 
-.navbar ul {
-    gap: 1.33rem;
-}
+    .navbar ul {
+        gap: 1.33rem;
+    }
 
-.navbar a {
-    font-size: 1.2rem;
-}
+    .navbar a {
+        font-size: 1.2rem;
+    }
 
-.bar {
-    width: 200px;
-    height: 27px;
-}
+    .bar {
+        width: 200px;
+        height: 27px;
+    }
 
-.list {
-    padding: 0.67rem;
-    font-size: 1rem;
-}
+    .list {
+        padding: 0.67rem;
+        font-size: 1rem;
+        flex-direction: column;
+        gap: 2rem;
+    }
 
-.greeting {
-    font-size: 2.4rem;
-}
+    .greeting {
+        font-size: 2.4rem;
+    }
 
-.card h1 {
-    font-size: 1.2rem;
-}
+    .card h1 {
+        font-size: 1.2rem;
+    }
 
-.button-text {
-    font-size: 1.2rem;
-}
+    .button-text {
+        font-size: 1.2rem;
+    }
 
-.list-image {
-    height: 300px;
-    width: auto;
-}
+    .list-image {
+        height: 300px;
+        width: auto;
+    }
+
+    .experience-container {
+        grid-template-columns: 1fr;
+    }
+
+    .education-card {
+        flex-direction: column;
+    }
+
+    .education-logo {
+        flex: 0 0 100px;
+    }
+
+    .university-logo {
+        max-width: 100px;
+    }
+
+    .certificates-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contacts-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .cvgreeting {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .cvpic {
+        width: 200px;
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .cvgreetingtext {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .experience-header h2 {
+        font-size: 1.1rem;
+    }
+
+    .company {
+        font-size: 0.9rem;
+    }
+
+    .responsibilities li {
+        font-size: 0.8rem;
+        padding-left: 1rem;
+    }
+
+    .reference-item {
+        font-size: 0.7rem;
+        padding-left: 1rem;
+        text-indent: -1rem;
+        margin-bottom: 1rem;
+    }
+
+    .social-links {
+        align-items: center;
+    }
+
+    .social-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .form-input {
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .message-box {
+        height: 100px;
+    }
+
+    .nav-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+    }
+
+    .block {
+        padding: 4rem 1rem 2rem;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        grid-gap: 1.5rem;
+    }
+
+    #progress {
+        font-size: 1rem;
+        padding: 3px 6px;
+    }
 }
 
 @media screen and (max-width: 480px) {
-.navbar {
-    padding: 0.22rem 0.55rem;
-}
+    /* Small mobile devices */
+    .navbar {
+        padding: 0.22rem 0.55rem;
+    }
 
-.navbar .logo {
-    height: 33px;
-}
+    .navbar .logo {
+        height: 33px;
+    }
 
-.navbar ul {
-    gap: 1rem;
-}
+    .navbar ul {
+        gap: 1rem;
+    }
 
-.navbar a {
-    font-size: 0.5rem;
-}
+    .navbar a {
+        font-size: 0.5rem;
+    }
 
-.bar {
-    width: 100px;
-    height: 20px;
-}
+    .bar {
+        width: 100px;
+        height: 20px;
+    }
 
-.list {
-    padding: 0.5rem;
-    font-size: 0.5rem;
-}
+    .list {
+        padding: 0.5rem;
+        font-size: 0.5rem;
+    }
 
-.greeting {
-    font-size: 1.2rem;
-}
+    .greeting {
+        font-size: 1.2rem;
+    }
 
-.card h1 {
-    font-size: 0.8rem;
-}
+    .card h1 {
+        font-size: 0.8rem;
+    }
 
-.button-text {
-    font-size: 0.6rem;
-}
+    .button-text {
+        font-size: 0.6rem;
+    }
 
-.list-image {
-    height: 150px;
-    width: auto;
-}
+    .list-image {
+        height: 150px;
+        width: auto;
+    }
+
+    .cvpic {
+        width: 150px;
+    }
+
+    .cvgreetingtext {
+        font-size: 1rem;
+    }
+
+    .experience-header h2 {
+        font-size: 0.9rem;
+    }
+
+    .company {
+        font-size: 0.8rem;
+    }
+
+    .responsibilities li {
+        font-size: 0.7rem;
+    }
+
+    .reference-item {
+        font-size: 0.6rem;
+    }
+
+    .social-icon {
+        width: 15px;
+        height: 15px;
+    }
+
+    .form-input {
+        padding: 0.4rem;
+        font-size: 0.7rem;
+    }
+
+    .message-box {
+        height: 80px;
+    }
+
+    .nav-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .experience-container,
+    .certificates-container,
+    .references-container {
+        padding: 1rem;
+    }
+
+    .block {
+        padding: 3rem 0.5rem 1rem;
+    }
+
+    #progress {
+        font-size: 0.8rem;
+        padding: 2px 4px;
+    }
 }

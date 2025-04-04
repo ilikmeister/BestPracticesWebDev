@@ -171,3 +171,100 @@ document.addEventListener('DOMContentLoaded', () => {
     const blocks = document.querySelectorAll('.block');
     blocks.forEach(block => observer.observe(block));
 });
+
+// function to handle form submission
+async function handleSubmit() {
+    const firstName = document.getElementById('firstName').value;
+    const lastName = document.getElementById('lastName').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // validation
+    if (!firstName || !lastName || !email || !message) {
+        alert('Please fill in all fields');
+        return;
+    }
+
+    if (!email.includes('@')) {
+        alert('Please enter a valid email address');
+        return;
+    }
+
+    try {
+        const templateParams = {
+            from_name: `${firstName} ${lastName}`,
+            from_email: email,
+            message: message
+        };
+
+        await emailjs.send(
+            'service_l7alkef',
+            'template_6aszau3',
+            templateParams
+        );
+
+        // clear form
+        document.getElementById('firstName').value = '';
+        document.getElementById('lastName').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('message').value = '';
+
+        alert('Message sent successfully!');
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Failed to send message. Please try again.');
+    }
+}
+
+// function to load GitHub projects
+async function loadGitHubProjects() {
+    const username = 'ilikmeister';
+    const container = document.getElementById('projects-container');
+
+    try {
+        const response = await fetch(`https://api.github.com/users/${username}/repos`);
+        const allRepos = await response.json();
+
+        // Clear loading message
+        container.innerHTML = '';
+
+        // Filter out forked repos
+        const ownRepos = allRepos.filter(repo => !repo.fork);
+
+        // Get 4 random repos
+        const randomRepos = ownRepos
+            .sort(() => 0.5 - Math.random()) // Shuffle array
+            .slice(0, 4); // Take first 4 items
+
+        randomRepos.forEach(repo => {
+            const card = document.createElement('div');
+            card.className = 'experience-card';
+            card.innerHTML = `
+                <div class="project-header">
+                    <h2>${repo.name}</h2>
+                    <span class="company">${repo.language || 'Various'}</span>
+                    <span class="duration">Last updated: ${new Date(repo.updated_at).toLocaleDateString()}</span>
+                </div>
+                <ul class="responsibilities">
+                    <li>${repo.description || 'No description available'}</li>
+                    <li><a href="${repo.html_url}" target="_blank" class="project-link">View on GitHub</a></li>
+                </ul>
+            `;
+            container.appendChild(card);
+        });
+    } catch (error) {
+        container.innerHTML = `
+            <div class="error-message">
+                Error loading projects. Please try again later.
+            </div>
+        `;
+        console.error('Error fetching GitHub repos:', error);
+    }
+}
+
+// load with the page
+document.addEventListener('DOMContentLoaded', () => {
+    const blocks = document.querySelectorAll('.block');
+    blocks.forEach(block => observer.observe(block));
+    loadGitHubProjects();
+});

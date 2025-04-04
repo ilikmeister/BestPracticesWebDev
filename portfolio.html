@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    
+    <!-- External resources and EmailJS configuration -->
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="functions.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS with public key
+        (function() {
+            emailjs.init("aHYc_wqESe1OCccIK");
+        })();
+    </script>
 </head>
 <body>
+    <!-- Fixed navbar -->
     <nav class="navbar">
         <div><a href="index.html"><img src="assets/icon.png" alt="Logo" class="logo"></a></div>
         <ul>
@@ -15,7 +26,10 @@
             <li onclick="scrollToBlock('cvgreeting')"><a class="active">Portfolio</a></li>
         </ul>
     </nav>
+
+    <!-- Main content container -->
     <div class="container">
+        <!-- Personal introduction and quick navigation -->
         <div class="block" id="cvgreeting">
             <div class="cvgreeting">
                 <div>
@@ -32,23 +46,261 @@
                 <img src="assets/pic.jpeg" alt="cv" class="cvpic">
             </div> 
         </div>
+
+        <!-- Professional experience section -->
         <div class="block" id="experience">
-            Experience content
+            <h1>Work Experience</h1>
+            <div class="experience-container">
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h2>System Administrator</h2>
+                        <span class="company">JSC "National Center for Civil Service Personnel Management"</span>
+                        <span class="duration">August 2023 - January 2024</span>
+                    </div>
+                    <ul class="responsibilities">
+                        <li>Maintained different servers: civil tests in 15 regions of Kazakhstan, camera monitoring, office internet, telephone system and LAN</li>
+                        <li>Troubleshot technical/network issues in the office</li>
+                        <li>Administered the database of the civil test examinations</li>
+                    </ul>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h2>Technical Support Engineer</h2>
+                        <span class="company">Sagi Ltd.</span>
+                        <span class="duration">September 2022 - August 2023</span>
+                    </div>
+                    <ul class="responsibilities">
+                        <li>Troubleshot technical problems of Sagi bonus system plugins in POS systems (iiko, 1C, Paloma365, rkeeper etc.), and of businesses that use Sagi website and Sagi mobile app</li>
+                        <li>Integrated/installed Sagi plugins into POS systems</li>
+                        <li>Administered the database of Sagi users and businesses</li>
+                    </ul>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h2>JavaScript Developer Intern</h2>
+                        <span class="company">Amazon OpenSearch Project</span>
+                        <span class="duration">March 2023 - May 2023</span>
+                    </div>
+                    <ul class="responsibilities">
+                        <li>Amazon College Contributor Initiative program</li>
+                        <li>Worked on the opensearch-js repository (Node.js client for OpenSearch)</li>
+                        <li>Created issues - Made pull requests</li>
+                    </ul>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h2>Web Developer Intern</h2>
+                        <span class="company">CodiPlay</span>
+                        <span class="duration">June 2022 - August 2022</span>
+                    </div>
+                    <ul class="responsibilities">
+                        <li>Developed the front-end of the website CodiTeach as a platform for teaching purposes using React JavaScript and Tailwind CSS</li>
+                        <li>Tested the website for bugs</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-buttons">
+                <button onclick="scrollToBlock('education')" class="nav-btn">Education</button>
+            </div>
         </div>
+
+        <!-- Academic background section -->
         <div class="block" id="education">
-            Education content
+            <h1>Education</h1>
+            <div class="experience-container">
+                <div class="education-card">
+                    <div class="education-logo">
+                        <img src="assets/uwa-logo.png   " alt="UWA Logo" class="university-logo">
+                    </div>
+                    <div class="education-content">
+                        <div class="experience-header">
+                            <h2>Master of Information Technology</h2>
+                            <span class="company">The University of Western Australia</span>
+                            <span class="duration">February 2024 - Present</span>
+                        </div>
+                        <ul class="responsibilities">
+                            <li>Expected graduation: December 2025</li>
+                            <li>Completed Units: Data Analysis and Decision Making, Computational Thinking with Python, Open Source Tools and Scripting, Introduction to Cybersecurity, Relational Database Management Systems, Computational Data Analysis, Systems Programming, The Internet of Things</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="education-card">
+                    <div class="education-logo">
+                        <img src="assets/aitu-logo.png" alt="AITU Logo" class="university-logo">
+                    </div>
+                    <div class="education-content">
+                        <div class="experience-header">
+                            <h2>Bachelor of Science in Information and Communication Technologies</h2>
+                            <span class="company">Astana IT University</span>
+                            <span class="duration">September 2020 - June 2023</span>
+                        </div>
+                        <ul class="responsibilities">
+                            <li>GPA: 3.38/4.00</li>
+                            <li>Diploma Work Title: Development of the game application as a tool for the formation of patriotic feelings</li>
+                            <li>Diploma Work Product: The battle of Orbulaq, Team of 3, an action-adventure mobile game on Unity about the historical battle</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-buttons">
+                <button onclick="scrollToBlock('experience')" class="nav-btn">Experience</button>
+                <button onclick="scrollToBlock('projects')" class="nav-btn">Projects</button>
+            </div>
         </div>
+
+        <!-- Dynamic GitHub projects showcase -->
         <div class="block" id="projects">
-            Projects content
+            <h1>Projects</h1>
+            <div class="experience-container" id="projects-container">
+                <div class="loading">Loading projects...</div>
+            </div>
+            <div class="nav-buttons">
+                <button onclick="scrollToBlock('education')" class="nav-btn">Education</button>
+                <button onclick="scrollToBlock('certificates')" class="nav-btn">Certificates</button>
+            </div>
         </div>
+
+        <!-- Certificates with credentials -->
         <div class="block" id="certificates">
-            Certificates content
+            <h1>Certificates</h1>
+            <div class="certificates-container">
+                <div class="certificate-card">
+                    <div class="certificate-content">
+                        <h2>NDG Linux Essentials</h2>
+                        <span class="company">Cisco Networking Academy</span>
+                        <span class="duration">January 2022</span>
+                        <a href="https://drive.google.com/file/d/1RxO850wQgWEbmR_HHismugz7WSHytevU/view?usp=sharing" target="_blank" class="certificate-link">Show Credential</a>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-content">
+                        <h2>IELTS Academic</h2>
+                        <span class="company">British Council</span>
+                        <span class="duration">October 2022</span>
+                        <a href="https://drive.google.com/file/d/1IjGcKRXxpoOd8XnD45oQAmuFcuHjU_T3/view?usp=sharing" target="_blank" class="certificate-link">Show Credential</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-buttons">
+                <button onclick="scrollToBlock('projects')" class="nav-btn">Projects</button>
+                <button onclick="scrollToBlock('contacts')" class="nav-btn">Contacts</button>
+            </div>
         </div>
+
+        <!-- Contact form and social media links -->
         <div class="block" id="contacts">
-            Contacts content
+            <h1>Contact Me</h1>
+            <div class="contacts-container">
+                <div class="social-links">
+                    <div class="social-item">
+                        <img src="assets/gmail-icon.png" alt="Email" class="social-icon">
+                        <a href="mailto:akhmet.i27@gmail.com">akhmet.i27@gmail.com</a>
+                    </div>
+                    <div class="social-item">
+                        <img src="assets/github-icon.png" alt="GitHub" class="social-icon">
+                        <a href="https://github.com/ilikmeister" target="_blank">ilikmeister</a>
+                    </div>
+                    <div class="social-item">
+                        <img src="assets/linkedin-icon.png" alt="LinkedIn" class="social-icon">
+                        <a href="https://linkedin.com/in/iliyas-akhmet" target="_blank">Iliyas Akhmet</a>
+                    </div>
+                    <div class="social-item">
+                        <img src="assets/inst-icon.png" alt="Instagram" class="social-icon">
+                        <a href="https://instagram.com/iliyasakhmet" target="_blank">iliyasakhmet</a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="firstName" placeholder="First Name" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="lastName" placeholder="Last Name" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Email" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" placeholder="Your Message" class="form-input message-box"></textarea>
+                    </div>
+                    <button onclick="handleSubmit()" class="nav-btn">Send Message</button>
+                </div>
+            </div>
+            <div class="nav-buttons">
+                <button onclick="scrollToBlock('certificates')" class="nav-btn">Certificates</button>
+                <button onclick="scrollToBlock('references')" class="nav-btn">References</button>
+            </div>
         </div>
+
+        <!-- Reference list -->
         <div class="block" id="references">
-            References content
+            <h1>References</h1>
+            <div class="references-container">
+                <ul class="reference-list">
+                    <li class="reference-item">
+                        CityPNG. (n.d.). <em>HD CSS3 round logo icon transparent PNG</em> [Image]. <a href="https://www.citypng.com/photo/26151/hd-css3-round-logo-icon-transparent-png">https://www.citypng.com/photo/26151/hd-css3-round-logo-icon-transparent-png</a>
+                    </li>
+                    <li class="reference-item">
+                        CityPNG. (n.d.). <em>HD HTML5 round logo icon transparent PNG</em> [Image]. <a href="https://www.citypng.com/png-download/26174">https://www.citypng.com/png-download/26174</a>
+                    </li>
+                    <li class="reference-item">
+                        CityPNG. (n.d.). <em>HD JavaScript round logo icon transparent PNG</em> [Image]. <a href="https://www.citypng.com/png-download/26154">https://www.citypng.com/png-download/26154</a>
+                    </li>
+                    <li class="reference-item">
+                        CSS-Tricks. (n.d.). <em>The em unit and web typography</em>. <a href="https://css-tricks.com/rems-ems/">https://css-tricks.com/rems-ems/</a>
+                    </li>
+                    <li class="reference-item">
+                        EthanD91. (n.d.). Using EmailJS to send emails from the frontend. <em>DEV Community</em>. <a href="https://dev.to/ethand91/using-emailjs-to-send-emails-from-the-frontend-ka9">https://dev.to/ethand91/using-emailjs-to-send-emails-from-the-frontend-ka9</a>
+                    </li>
+                    <li class="reference-item">
+                        GitHub & OpenAI. (2023). <em>GitHub Copilot</em> [AI pair programming tool]. <a href="https://github.com/features/copilot">https://github.com/features/copilot</a>
+                    </li>
+                    <li class="reference-item">
+                        <strong>GitHub Copilot was used as an assistance tool to create code for some sections to improve the design, optimize the code and validate/correct mistakes.</strong>
+                    </li>
+                    <li class="reference-item">
+                        Hong, E. (n.d.). A simple understanding of HTML, CSS, and JavaScript. <em>LinkedIn</em>. <a href="https://www.linkedin.com/pulse/simple-understanding-html-css-javascript-eddie-hong-3snhc/">https://www.linkedin.com/pulse/simple-understanding-html-css-javascript-eddie-hong-3snhc/</a>
+                    </li>
+                    <li class="reference-item">
+                        Icons8. (n.d.). <em>Web development icons (white)</em> [Image]. <a href="https://icons8.com/icons/set/web-development--white">https://icons8.com/icons/set/web-development--white</a>
+                    </li>
+                    <li class="reference-item">
+                        Mozilla. (n.d.). HTML elements reference. <em>MDN Web Docs</em>. <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">https://developer.mozilla.org/en-US/docs/Web/HTML/Element</a>
+                    </li>
+                    <li class="reference-item">
+                        Mozilla. (n.d.). JavaScript best practices. <em>MDN Web Docs</em>. <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting">https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting</a>
+                    </li>
+                    <li class="reference-item">
+                        Mozilla Developer Network. (n.d.). <em>CSS flexbox guide</em>. <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox">https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox</a>
+                    </li>
+                    <li class="reference-item">
+                        Mozilla Developer Network. (n.d.). <em>JavaScript variables</em>. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Variables">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Variables</a>
+                    </li>
+                    <li class="reference-item">
+                        Smashing Magazine. (2023). <em>CSS best practices: Writing efficient and maintainable stylesheets</em>. <a href="https://www.smashingmagazine.com/">https://www.smashingmagazine.com/</a>
+                    </li>
+                    <li class="reference-item">
+                        W3Schools. (n.d.). <em>CSS animations</em>. <a href="https://www.w3schools.com/css/css3_animations.asp">https://www.w3schools.com/css/css3_animations.asp</a>
+                    </li>
+                    <li class="reference-item">
+                        W3Schools. (n.d.). <em>CSS how to add CSS</em>. <a href="https://www.w3schools.com/css/css_howto.asp">https://www.w3schools.com/css/css_howto.asp</a>
+                    </li>
+                    <li class="reference-item">
+                        W3Schools. (n.d.). <em>JavaScript async/await</em>. <a href="https://www.w3schools.com/js/js_async.asp">https://www.w3schools.com/js/js_async.asp</a>
+                    </li>
+                    <li class="reference-item">
+                        W3Schools. (n.d.). <em>JavaScript performance tips</em>. <a href="https://www.w3schools.com/js/js_best_practices.asp">https://www.w3schools.com/js/js_best_practices.asp</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-buttons">
+                <button onclick="scrollToBlock('contacts')" class="nav-btn">Contacts</button>
+                <button onclick="scrollToBlock('cvgreeting')" class="nav-btn">Top</button>
+            </div>
         </div>
     </div>
 </body>
